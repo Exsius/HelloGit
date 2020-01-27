@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Survey</title>
+		<!-- This head section needs to be completed using meta tags-->
+	</head>
+	<body>
+		
+		<form method="post" action="confirmation.html" name="FeedbackForm">
+			<input type="hidden" name="subject" value="Feedback Form">
+			<fieldset>
+				<legend>Personal information</legend>
+				<p>
+					<label> Name:
+							<input name="fullname" type="text" size="25" value="" maxlength="20" >
+					</label>
+				</p>
+
+				<p>
+					<label for="ageID"> Age:</label>
+					<input name="age" type="number" min="15" step="5" max="100" value="20" id="ageID">
+				</p>
+			</fieldset>
+
+			<p>
+				<label> Age Range:
+				        <input name="ageRange" type="range" min="15" step="5" max="100" value="20">
+				</label>
+			</p>
+
+			<p>
+				<label> Password:
+				        <input name="pass" type="password" size="25" maxlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters">
+				</label>
+			</p>
+
+
+			
+			<p>
+				<label> Telphone:
+					<input name="telphone" type="tel" size="25" placeholder="403-111-1111" pattern="[0-9]{3}[\-][0-9]{3}[\-][0-9]{4}" maxlength="20" required="">
+					(e.g., 403-111-1111)
+				</label>
+			</p>
+
+			<p>
+				<label> Date:
+				        <input name="date" type="date">
+				</label>
+			</p>
+			
+			<p>
+				<label> Your favourite color:
+				        <input name="mycolor" type="color" value="#ff0000">
+				</label>
+			</p>
+
+			<p>
+				<label> File:
+				        <input name="file" type="file">
+				</label>
+			</p>
+
+			<p>
+				Program:
+				<label> 
+					BCIS
+				    <input name="program" type="radio" value="bcis" checked>
+				</label>
+				<label> CS
+				        <input name="program" type="radio" value="cs">
+				</label>
+				<label> Other
+				        <input name="program" type="radio" value="other">
+				</label>
+			</p>
+
+
+			<p>
+				Courses you like:<br>
+				<label> Web Development
+				        <input name="course" type="checkbox" value="Web Development">
+				</label>
+				<label> Programming
+				        <input name="course" type="checkbox" value="Programming">
+				</label>
+				<label> System Analysis
+				        <input name="course" type="checkbox" value="System Analysis">
+				</label>
+				<label> Databases
+				        <input name="course" type="checkbox" value="Databases">
+				</label>
+			</p>
+			
+			<p>
+				<label>Rate your site<br>
+					<select name="rating" required >
+						<option value="4"> Awesome - 4 </option>
+						<option value="3" selected> Good - 3 </option>
+						<option value="2"> Acceptable - 2 </option>
+						<option value="1"> Poor - 1 </option>
+
+					</select>
+				</label>
+			</p>
+
+			<p>
+				<label> Comments:<br>
+					<textarea name="comment" rows="5" cols="50"></textarea>
+				</label>
+			</p>
+
+			<input type="submit" value="Send">
+			<input type="reset" value="Clear">
+		</form>
+	</body>
+</html>
